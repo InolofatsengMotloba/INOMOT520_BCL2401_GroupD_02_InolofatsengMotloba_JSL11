@@ -101,6 +101,8 @@ const elements = {
   cancelEditBtn: document.getElementById('cancel-edit-btn'),
   deleteTaskBtn: document.getElementById('delete-task-btn'),
 
+  // Get the filter div
+  filterDiv: document.getElementById('filterDiv')
 }
 
 let activeBoard = ""

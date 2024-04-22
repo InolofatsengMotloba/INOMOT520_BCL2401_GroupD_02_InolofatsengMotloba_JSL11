@@ -73,6 +73,20 @@ const elements = {
   doneText: document.getElementById('doneText'),
   doneTasksContainer: doneColumn.querySelector('.tasks-container'),
 
+  // Get the new task modal elements
+  newTaskModal: document.getElementById('new-task-modal-window'),
+  modalTitle: document.querySelector('.modal-title'),
+  inputDiv: document.querySelector('.input-div'),
+  modalTitleInput: document.getElementById('modal-title-input'),
+  titleInput: document.getElementById('title-input'),
+  modalDescInput: document.getElementById('modal-desc-input'),
+  modalDescInput: document.getElementById('desc-input'),
+  modalSelectStatus: document.getElementById('modal-select-status'),
+  selectStatus: document.getElementById('select-status'),
+  btnGroup: document.querySelector('.button-group'),
+  createTaskBtn: document.getElementById('create-task-btn'),
+  cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
+
 }
 
 let activeBoard = ""

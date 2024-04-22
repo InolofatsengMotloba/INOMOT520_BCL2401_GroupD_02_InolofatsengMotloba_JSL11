@@ -40,7 +40,21 @@ const elements = {
   iconLight: document.getElementById('icon-light'),
   hideSideBarDiv: document.querySelector('.hide-side-bar-div'),
   hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
-  showSideBarBtn: document.getElementById('show-side-bar-btn')
+  showSideBarBtn: document.getElementById('show-side-bar-btn'),
+
+  // Get the main layout elements
+  layout: document.getElementById('layout'),
+  header: document.getElementById('header'),
+  headerNameDiv: document.querySelector('.header-name-div'),
+  logoMobile: document.querySelector('.logo-mobile'),
+  headerBoardName: document.getElementById('header-board-name'),
+  dropDownBtn: document.getElementById('dropdownBtn'),
+  dropDownIcon: document.getElementById('dropDownIcon'),
+  addNewTaskBtn: document.getElementById('add-new-task-btn'),
+  editBoardBtn: document.getElementById('edit-board-btn'),
+  threeDotsIcon: document.getElementById('three-dots-icon'),
+  editBoardDiv: document.getElementById('editBoardDiv'),
+  deleteBoardBtn: document.getElementById('deleteBoardBtn'),
 
 }
 

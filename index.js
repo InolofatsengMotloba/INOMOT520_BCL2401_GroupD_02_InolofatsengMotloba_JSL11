@@ -56,6 +56,23 @@ const elements = {
   editBoardDiv: document.getElementById('editBoardDiv'),
   deleteBoardBtn: document.getElementById('deleteBoardBtn'),
 
+  // Get the task columns elements
+  todoColumn: document.querySelector('.column-div'),
+  todoHeadDiv: document.getElementById('todo-head-div'),
+  todoDot: document.getElementById('todo-dot'),
+  todoText: document.getElementById('toDoText'),
+  todoTasksContainer: todoColumn.querySelector('.tasks-container'),
+  doingColumn: document.querySelector('.column-div'),
+  doingHeadDiv: document.getElementById('doing-head-div'),
+  doingDot: document.getElementById('doing-dot'),
+  doingText: document.getElementById('doingText'),
+  doingTasksContainer: doingColumn.querySelector('.tasks-container'),
+  doneColumn: document.querySelector('.column-div'),
+  doneHeadDiv: document.getElementById('done-head-div'),
+  doneDot: document.getElementById('done-dot'),
+  doneText: document.getElementById('doneText'),
+  doneTasksContainer: doneColumn.querySelector('.tasks-container'),
+
 }
 
 let activeBoard = ""

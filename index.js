@@ -26,6 +26,21 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+  // Get the navigation sidebar elements
+  sideBar: document.querySelector('.side-bar'),
+  sideLogo: document.getElementById('side-logo-div'),
+  logo: document.getElementById('logo'),
+  boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
+  headlineSidepanel: document.getElementById('headline-sidepanel'),
+  sideBarBottom: document.querySelector('.side-bar-bottom'),
+  toggleDiv: document.querySelector('.toggle-div'),
+  iconDark: document.getElementById('icon-dark'),
+  switchInput: document.getElementById('switch'),
+  labelCheckboxTheme: document.getElementById('label-checkbox-theme'),
+  iconLight: document.getElementById('icon-light'),
+  hideSideBarDiv: document.querySelector('.hide-side-bar-div'),
+  hideSideBarBtn: document.getElementById('hide-side-bar-btn'),
+  showSideBarBtn: document.getElementById('show-side-bar-btn')
 
 }
 

@@ -5,7 +5,7 @@ import {
   patchTask, 
   putTask, 
   deleteTask 
-} from './utils/taskFunction.js';
+} from './utils/taskFunctions.js';
 
 // TASK: import initialData
 import { initialData } from "./initialData.js";
@@ -31,14 +31,14 @@ initializeData()
 const elements = {
   // Get the navigation sidebar elements
   sideBar: document.querySelector('.side-bar'),
-  sideLogo: document.getElementById('side-logo-div'),
+  sideLogoDiv: document.getElementById('side-logo-div'),
   logo: document.getElementById('logo'),
   boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
   headlineSidepanel: document.getElementById('headline-sidepanel'),
   sideBarBottom: document.querySelector('.side-bar-bottom'),
   toggleDiv: document.querySelector('.toggle-div'),
   iconDark: document.getElementById('icon-dark'),
-  switchInput: document.getElementById('switch'),
+  themeSwitch: document.getElementById('switch'),
   labelCheckboxTheme: document.getElementById('label-checkbox-theme'),
   iconLight: document.getElementById('icon-light'),
   hideSideBarDiv: document.querySelector('.hide-side-bar-div'),
@@ -60,30 +60,28 @@ const elements = {
   deleteBoardBtn: document.getElementById('deleteBoardBtn'),
 
   // Get the task columns elements
-  todoColumn: document.querySelector('.column-div'),
+  cardColumnMain: document.querySelector('.card-column-main'),
+  columnDivs: document.querySelector('.column-div'),
   todoHeadDiv: document.getElementById('todo-head-div'),
   todoDot: document.getElementById('todo-dot'),
   todoText: document.getElementById('toDoText'),
-  todoTasksContainer: todoColumn.querySelector('.tasks-container'),
-  doingColumn: document.querySelector('.column-div'),
+  tasksContainer: document.querySelector('.tasks-container'),
   doingHeadDiv: document.getElementById('doing-head-div'),
   doingDot: document.getElementById('doing-dot'),
   doingText: document.getElementById('doingText'),
-  doingTasksContainer: doingColumn.querySelector('.tasks-container'),
-  doneColumn: document.querySelector('.column-div'),
+  tasksContainer: document.querySelector('.tasks-container'),
   doneHeadDiv: document.getElementById('done-head-div'),
   doneDot: document.getElementById('done-dot'),
   doneText: document.getElementById('doneText'),
-  doneTasksContainer: doneColumn.querySelector('.tasks-container'),
 
   // Get the new task modal elements
-  newTaskModal: document.getElementById('new-task-modal-window'),
+  newTaskModalWindow: document.getElementById('new-task-modal-window'),
   modalTitle: document.querySelector('.modal-title'),
   inputDiv: document.querySelector('.input-div'),
   modalTitleInput: document.getElementById('modal-title-input'),
   titleInput: document.getElementById('title-input'),
   modalDescInput: document.getElementById('modal-desc-input'),
-  modalDescInput: document.getElementById('desc-input'),
+  descInput: document.getElementById('desc-input'),
   modalSelectStatus: document.getElementById('modal-select-status'),
   selectStatus: document.getElementById('select-status'),
   btnGroup: document.querySelector('.button-group'),
@@ -91,12 +89,12 @@ const elements = {
   cancelAddTaskBtn: document.getElementById('cancel-add-task-btn'),
 
   // Get the edit task modal elements
-  editTaskModal: document.querySelector('.edit-task-modal-window'),
+  editTaskModalWindow: document.querySelector('.edit-task-modal-window'),
   editTaskForm: document.getElementById('edit-task-form'),
-  edittaskHeader: document.getElementById('edit-task-header'),
+  editTaskHeader: document.getElementById('edit-task-header'),
   editTaskTitleInput: document.getElementById('edit-task-title-input'),
   editBtn: document.getElementById('edit-btn'),
-  edittaskDiv: document.querySelector('.edit-task-div'),
+  editTaskDivs: document.querySelector('.edit-task-div'),
   editTaskDescInput: document.getElementById('edit-task-desc-input'),
   labelModalWindow: document.querySelector('.label-modal-window'),
   editSelectStatus: document.getElementById('edit-select-status'),

@@ -53,7 +53,7 @@ const elements = {
   headerBoardName: document.getElementById('header-board-name'),
   dropDownBtn: document.getElementById('dropdownBtn'),
   dropDownIcon: document.getElementById('dropDownIcon'),
-  addNewTaskBtn: document.getElementById('add-new-task-btn'),
+  createNewTaskBtn: document.getElementById('add-new-task-btn'),
   editBoardBtn: document.getElementById('edit-board-btn'),
   threeDotsIcon: document.getElementById('three-dots-icon'),
   editBoardDiv: document.getElementById('editBoardDiv'),
@@ -61,7 +61,7 @@ const elements = {
 
   // Get the task columns elements
   cardColumnMain: document.querySelector('.card-column-main'),
-  columnDivs: document.querySelector('.column-div'),
+  columnDivs: document.querySelectorAll('.column-div'),
   todoHeadDiv: document.getElementById('todo-head-div'),
   todoDot: document.getElementById('todo-dot'),
   todoText: document.getElementById('toDoText'),
@@ -75,7 +75,7 @@ const elements = {
   doneText: document.getElementById('doneText'),
 
   // Get the new task modal elements
-  newTaskModalWindow: document.getElementById('new-task-modal-window'),
+  modalWindow: document.getElementById('new-task-modal-window'),
   modalTitle: document.querySelector('.modal-title'),
   inputDiv: document.querySelector('.input-div'),
   modalTitleInput: document.getElementById('modal-title-input'),
@@ -187,13 +187,13 @@ function refreshTasksUI() {
 // Styles the active board by adding an active class
 // TASK: Fix Bugs
 function styleActiveBoard(boardName) {
-  document.querySelectorAll('.board-btn').foreach(btn => { 
+  document.querySelectorAll('.board-btn').forEach(btn => { 
     
     if(btn.textContent === boardName) {
-      btn.add('active') 
+      btn.classList.add('active') 
     }
     else {
-      btn.remove('active'); 
+      btn.classList.remove('active'); 
     }
   });
 }

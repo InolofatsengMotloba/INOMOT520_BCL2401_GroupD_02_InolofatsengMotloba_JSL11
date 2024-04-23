@@ -145,25 +145,33 @@ function displayBoards(boards) {
 }
 
 // Filters tasks corresponding to the board name and displays them on the DOM.
+
+const columnTile = {
+  todo: 'TODO',
+  doing: 'DOING',
+  done: 'DONE'
+}
+
 // TASK: Fix Bugs
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
-  const filteredTasks = tasks.filter(task => task.board = boardName);
+  const filteredTasks = tasks.filter(task => task.board === boardName);
 
   // Ensure the column titles are set outside of this function or correctly initialized before this function runs
 
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
+    const select = columnTile[status];
     // Reset column content while preserving the column title
     column.innerHTML = `<div class="column-head-div">
                           <span class="dot" id="${status}-dot"></span>
-                          <h4 class="columnHeader">${status.toUpperCase()}</h4>
+                          <h4 class="columnHeader">${select.toUpperCase()}</h4>
                         </div>`;
 
     const tasksContainer = document.createElement("div");
     column.appendChild(tasksContainer);
 
-    filteredTasks.filter(task => task.status = status).forEach(task => { 
+    filteredTasks.filter(task => task.status === status).forEach(task => { 
       const taskElement = document.createElement("div");
       taskElement.classList.add("task-div");
       taskElement.textContent = task.title;

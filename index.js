@@ -24,6 +24,9 @@ function initializeData() {
   }
 }
 
+// Call initializeData function to execute the initialization logic
+initializeData()
+
 // TASK: Get elements from the DOM
 const elements = {
   // Get the navigation sidebar elements

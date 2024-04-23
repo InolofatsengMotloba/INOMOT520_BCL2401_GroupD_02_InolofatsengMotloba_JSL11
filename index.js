@@ -301,7 +301,7 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
- 
+  document.body.classList.toggle('light-theme');
 }
 
 

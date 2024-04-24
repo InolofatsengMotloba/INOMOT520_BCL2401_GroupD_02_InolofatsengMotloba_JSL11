@@ -123,6 +123,8 @@ function fetchAndDisplayBoardsAndTasks() {
   }
 }
 
+
+
 // Creates different boards in the DOM
 // TASK: Fix Bugs
 function displayBoards(boards) {
@@ -227,7 +229,7 @@ function addTaskToUI(task) {
   taskElement.textContent = task.title; // Modify as needed
   taskElement.setAttribute('data-task-id', task.id);
   
-  tasksContainer.appendChild(); 
+  tasksContainer.appendChild(taskElement); 
 }
 
 
@@ -285,7 +287,11 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
-      
+      board: activeBoard,
+      description: elements.descInput.value,
+      id: '',
+      status: elements.selectStatus.value,
+      title: elements.titleInput.value
     };
     const newTask = createNewTask(task);
     if (newTask) {

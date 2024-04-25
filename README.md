@@ -14,10 +14,10 @@ In this project, I brought a Kanban Management app to life by implementing the f
 6. The side bar can be hidden to gain more work space or opened to access different boards and the theme switch.
 7. The user can also use dark mode to reduce eye strain and light mode to suite the environments with the according logo updates.
 
-### Project outcome
+## Project outcome
 
 ![alt text](MyJSL11.png)
 
-### Loom Presentatio Link
+## Loom Presentation Link
 
-https://www.loom.com/share/909547fca7d845aca300444231e96492?sid=9cfb91de-06ec-423d-9e0c-3534083d77b8
+[Loom Presentation Link](https://www.loom.com/share/909547fca7d845aca300444231e96492?sid=9cfb91de-06ec-423d-9e0c-3534083d77b8)

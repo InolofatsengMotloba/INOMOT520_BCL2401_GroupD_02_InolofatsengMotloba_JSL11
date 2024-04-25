@@ -21,3 +21,13 @@ In this project, I brought a Kanban Management app to life by implementing the f
 ## Loom Presentation Link
 
 [Loom Presentation Link](https://www.loom.com/share/7f79746ce8ac44589f95f61da820ee10?sid=334573d2-2e4f-4acf-afec-eef55fa46d11)
+
+## Learning Reflections
+
+1. Error Handling in Local Storage Initialization: The `initializeData()` function handles the case when localStorage doesn't have the 'tasks' key by initializing it with initialData, ensuring the app has default data to work with.
+2. DOM Manipulation: I learned how to retrieve and manipulates DOM elements using document.getElementById and document.querySelector, though not efficiently which helped in writing cleaner and more readable code, making it easier to maintain and debug.
+3. Event listeners are set up to handle various user interactions like adding, editing, and deleting tasks, toggling sidebar visibility, and changing themes. This ensures that user interactions are captured and processed correctly, enhancing the user experience.
+4. Several bugs were identified and fixed, such as in `displayBoards()`, `filterAndDisplayTasksByBoard()`, and `styleActiveBoard()`, ensuring proper functionality. Although a struggle, this improved code quality and reliability.
+5. Local Storage Usage: Local storage is utilized to store and retrieve data like tasks, active board, theme preferences, and sidebar visibility. This provides a seamless user experience.
+6. The code effectively manages tasks, including adding, editing, and deleting tasks, as well as updating their statuses and boards.
+7. UI/UX Enhancements: The code includes features like modal dialogs for adding and editing tasks, active board styling, and theme toggling, enhancing the user interface and experience.

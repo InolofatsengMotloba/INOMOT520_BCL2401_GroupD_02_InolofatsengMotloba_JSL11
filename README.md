@@ -20,4 +20,4 @@ In this project, I brought a Kanban Management app to life by implementing the f
 
 ## Loom Presentation Link
 
-[Loom Presentation Link](https://www.loom.com/share/909547fca7d845aca300444231e96492?sid=9cfb91de-06ec-423d-9e0c-3534083d77b8)
+[Loom Presentation Link](https://www.loom.com/share/7f79746ce8ac44589f95f61da820ee10?sid=334573d2-2e4f-4acf-afec-eef55fa46d11)

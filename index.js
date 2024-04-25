@@ -1,4 +1,4 @@
-// TASK: import helper functions from utils
+// Import helper functions from utils
 import { 
   getTasks, 
   createNewTask, 
@@ -7,12 +7,8 @@ import {
   deleteTask 
 } from './utils/taskFunctions.js';
 
-// TASK: import initialData
+// Import initialData
 import { initialData } from "./initialData.js";
-
-/*************************************************************************************************************************************************
- * FIX BUGS!!!
- * **********************************************************************************************************************************************/
 
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
@@ -27,7 +23,7 @@ function initializeData() {
 // Call initializeData function to execute the initialization logic
 initializeData();
 
-// TASK: Get elements from the DOM
+// Get elements from the DOM
 const elements = {
   // Get the navigation sidebar elements
   sideBar: document.querySelector('.side-bar'),
@@ -109,7 +105,6 @@ const elements = {
 let activeBoard = ""
 
 // Extracts unique board names from tasks
-// TASK: FIX BUGS
 function fetchAndDisplayBoardsAndTasks() {
   const tasks = getTasks();
   const boards = [...new Set(tasks.map(task => task.board).filter(Boolean))];
@@ -126,7 +121,6 @@ function fetchAndDisplayBoardsAndTasks() {
 
 
 // Creates different boards in the DOM
-// TASK: Fix Bugs
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
   boardsContainer.innerHTML = ''; // Clears the container
@@ -154,7 +148,7 @@ const columnTile = {
   done: 'DONE'
 }
 
-// TASK: Fix Bugs
+// Function to filter and display tasks by board name
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
   const filteredTasks = tasks.filter(task => task.board === boardName);
@@ -189,13 +183,12 @@ function filterAndDisplayTasksByBoard(boardName) {
   });
 }
 
-
+// Function to refresh the UI by filtering and displaying tasks based on the active board
 function refreshTasksUI() {
   filterAndDisplayTasksByBoard(activeBoard);
 }
 
 // Styles the active board by adding an active class
-// TASK: Fix Bugs
 function styleActiveBoard(boardName) {
   document.querySelectorAll('.board-btn').forEach(btn => { 
     
@@ -208,7 +201,7 @@ function styleActiveBoard(boardName) {
   });
 }
 
-
+// Function to add a task to the UI
 function addTaskToUI(task) {
   const column = document.querySelector(`.column-div[data-status="${task.status}"]`); 
   if (!column) {
@@ -233,7 +226,7 @@ function addTaskToUI(task) {
 }
 
 
-
+// Function to set up event listeners for various UI interactions
 function setupEventListeners() {
   // Cancel editing task event listener
   const cancelEditBtn = document.getElementById('cancel-edit-btn');
@@ -282,6 +275,7 @@ function toggleModal(show, modal = elements.modalWindow) {
  * COMPLETE FUNCTION CODE
  * **********************************************************************************************************************************************/
 
+// Function to add a new task
 function addTask(event) {
   event.preventDefault(); 
 
@@ -303,7 +297,7 @@ function addTask(event) {
     }
 }
 
-
+// Function to toggle the sidebar visibility
 function toggleSidebar(show) {
  if (show) {
   elements.sideBar.style.display = 'block';
@@ -336,7 +330,7 @@ function toggleTheme() {
 }
 
 
-
+// Function to open the edit task modal and populate it with task details
 function openEditTaskModal(task) {
   // Set task details in modal inputs
   elements.editTaskTitleInput.value = task.title;
@@ -360,6 +354,7 @@ function openEditTaskModal(task) {
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
 }
 
+// Function to save changes made to a task
 function saveTaskChanges(taskId) {
   // Get new user inputs
   
@@ -383,10 +378,12 @@ function saveTaskChanges(taskId) {
 
 /*************************************************************************************************************************************************/
 
+// Event listener to initialize the app after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
   init(); // init is called after the DOM is fully loaded
 });
 
+// Function to initialize the app
 function init() {
   if (localStorage.getItem('logo-theme') === './assets/logo-light.svg'){
     elements.logo.src = './assets/logo-light.svg';

@@ -319,7 +319,20 @@ function toggleSidebar(show) {
 elements.sideBarBottom.style.paddingTop = "300px"
 
 function toggleTheme() {
+  const isLightTheme = document.body.classList.contains('light-theme');
   document.body.classList.toggle('light-theme');
+  localStorage.setItem('light-theme', !isLightTheme ? "enabled" : "disabled");
+
+  if(isLightTheme) {
+    localStorage.setItem('logo-theme', './assets/logo-dark.svg')
+    localStorage.setItem('light-theme', 'disabled')
+  } else {
+    localStorage.setItem('logo-theme', './assets/logo-light.svg')
+    localStorage.setItem('light-theme', 'enabled')
+  }
+
+  elements.logo.src = localStorage.getItem('logo-theme');
+
 }
 
 
@@ -375,10 +388,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
+  if (localStorage.getItem('logo-theme') === './assets/logo-light.svg'){
+    elements.logo.src = './assets/logo-light.svg';
+  }
   setupEventListeners();
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
   document.body.classList.toggle('light-theme', isLightTheme);
+  elements.themeSwitch.checked = isLightTheme;
   fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
 }

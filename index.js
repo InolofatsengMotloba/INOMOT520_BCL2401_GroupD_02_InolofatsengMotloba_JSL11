@@ -312,6 +312,8 @@ function toggleSidebar(show) {
   elements.sideBar.style.display = 'none';
   elements.showSideBarBtn.style.display = 'block';
  }
+
+ localStorage.setItem("showSideBar", show);
 }
 
 elements.sideBarBottom.style.paddingTop = "300px"

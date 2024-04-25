@@ -314,6 +314,8 @@ function toggleSidebar(show) {
  }
 }
 
+elements.sideBarBottom.style.paddingTop = "300px"
+
 function toggleTheme() {
   document.body.classList.toggle('light-theme');
 }
@@ -372,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function init() {
   setupEventListeners();
-  const showSidebar = localStorage.getItem('showSideBar') === 'false';
+  const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
   document.body.classList.toggle('light-theme', isLightTheme);
